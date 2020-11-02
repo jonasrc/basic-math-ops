@@ -21,5 +21,3 @@ math.subtract(5, 2)
 math.multiply(7, 3)
 math.divide(8, 4)
 ```
-
-###Find me on github
