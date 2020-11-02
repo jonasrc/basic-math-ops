@@ -1,0 +1,21 @@
+{
+  "name": "basic-math-ops",
+  "version": "1.0.3",
+  "description": "Basic mathematical operations with Decorator design pattern for input validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "nodemon": "^2.0.6"
+  },
+  "keywords": [
+    "math",
+    "mathematics",
+    "basic",
+    "operations"
+  ],
+  "author": "Jonas Rocha Castanheira",
+  "license": "ISC"
+}
