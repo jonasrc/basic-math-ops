@@ -1,6 +1,6 @@
 # Basic Math Operations
 
-######Package developed as part of PUC-MG software architecture graduation program
+###### Package developed as part of PUC-MG software architecture graduation program
 
 This package does the basic four mathematical operations (sum, subtraction, multiplication and division).
 
@@ -8,11 +8,11 @@ The math module itself relies on a vanilla JS implementation of the Decorator de
 validation logic common to all exported functions, whilst the specific operation methods augment the common logic with
 their specific logic.
 
-##Installation
+## Installation
 
 `npm i basic-math-ops` 
 
-##Usage
+## Usage
 
 ```javascript
 const math = require('basic-math-ops/math')
