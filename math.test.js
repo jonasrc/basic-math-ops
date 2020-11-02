@@ -1,12 +1,14 @@
 const math = require('./math');
+const InvalidParametersError = require('./errors/InvalidParametersError');
+const DivisionByZeroError = require('./errors/DivisionByZeroError');
 
 //Parameter validation tests
-test('Passing not numeric strings (\'abc\' + \'cde\') = Error: ' + math.ERR_INVALID_PARAMETERS, () => {
-    expect(() => math.sum('abc', 'def')).toThrowError(math.ERR_INVALID_PARAMETERS);
+test('Passing not numeric strings (\'abc\' + \'cde\') = throws InvalidParametersError', () => {
+    expect(() => math.sum('abc', 'def')).toThrowError(InvalidParametersError);
 });
 
-test('Passing numeric strings (\'1\' + \'2\') = Error: ' + math.ERR_INVALID_PARAMETERS, () => {
-    expect(() => math.sum('1', '2')).toThrowError(math.ERR_INVALID_PARAMETERS);
+test('Passing numeric strings (\'1\' + \'2\') = throws InvalidParametersError', () => {
+    expect(() => math.sum('1', '2')).toThrowError(InvalidParametersError);
 });
 
 //Sum tests
@@ -53,6 +55,6 @@ test('16 / 2 = 8', () => {
     expect(math.divide(16, 2)).toBe(8);
 });
 
-test('8 / 0 = Error: ' + math.ERR_DIVISION_BY_ZERO, () => {
-    expect(() => math.divide(8, 0)).toThrowError(math.ERR_DIVISION_BY_ZERO);
+test('8 / 0 = throws DivisionByZeroError', () => {
+    expect(() => math.divide(8, 0)).toThrowError(DivisionByZeroError);
 });

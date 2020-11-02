@@ -1,5 +1,5 @@
-const ERR_INVALID_PARAMETERS = 'Invalid parameters passed to function.';
-const ERR_DIVISION_BY_ZERO = 'Division by zero is not allowed.';
+const InvalidParametersError = require('./errors/InvalidParametersError');
+const DivisionByZeroError = require('./errors/DivisionByZeroError');
 
 /*
 Vanilla JS decorator pattern
@@ -10,7 +10,7 @@ function wrapper(internalOperation) {
     return function() {
         const [a, b] = arguments;
         if(!validateInputs(a, b)) {
-            throw new Error(ERR_INVALID_PARAMETERS);
+            throw new InvalidParametersError();
         }
 
         return internalOperation.apply(this, arguments);
@@ -28,7 +28,7 @@ const internalSubtract = (a, b) => a - b;
 const internalMultiply = (a, b) => a * b;
 
 const internalDivide = (a, b) => {
-    if(!validateDivisor(b)) throw new Error(ERR_DIVISION_BY_ZERO);
+    if(!validateDivisor(b)) throw new DivisionByZeroError();
     return a / b;
 };
 
@@ -37,9 +37,5 @@ exports.sum = wrapper(internalSum);
 exports.subtract = wrapper(internalSubtract);
 exports.multiply = wrapper(internalMultiply);
 exports.divide = wrapper(internalDivide);
-
-//Exported throwables
-exports.ERR_INVALID_PARAMETERS = ERR_INVALID_PARAMETERS;
-exports.ERR_DIVISION_BY_ZERO = ERR_DIVISION_BY_ZERO;
 
 
