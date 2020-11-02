@@ -1,4 +1,5 @@
 # Basic Math Operations
+
 ######Package developed as part of PUC-MG software architecture graduation program
 
 This package does the basic four mathematical operations (sum, subtraction, multiplication and division).
@@ -21,3 +22,5 @@ math.subtract(5, 2)
 math.multiply(7, 3)
 math.divide(8, 4)
 ```
+
+[Find me on Github](https://github.com/jonasrc)
